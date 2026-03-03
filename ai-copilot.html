@@ -327,6 +327,28 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   .cnav{grid-template-columns:1fr}
   .cnav-half:last-child{border-left:none;border-top:1px solid var(--bdr)}
 }
+/* ─── HAMBURGER ─── */
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;background:none;border:none;cursor:pointer;padding:8px;border-radius:8px;transition:background .2s}
+.nav-hamburger:hover{background:rgba(255,255,255,.08)}
+.nav-hamburger span{display:block;width:20px;height:2px;background:var(--text);border-radius:2px;transition:all .28s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:768px){
+  nav{padding:0 20px}
+  .nav-hamburger{display:flex}
+  .nav-logo,.nav-divider{display:none!important}
+  .nav-links{display:none;position:absolute;top:60px;left:0;right:0;background:rgba(10,10,15,.97);backdrop-filter:blur(24px);border-bottom:1px solid var(--bdr);flex-direction:column;padding:12px 16px 20px;gap:2px;z-index:899}
+  .nav-links.open{display:flex}
+  .nav-links li{width:100%}
+  .nav-links a{display:block;padding:12px 16px;border-radius:8px;font-size:15px}
+  .nav-links a.cta{margin-left:0;margin-top:6px;text-align:center;padding:12px 16px}
+  .nav-links li:last-child{padding-top:8px;border-top:1px solid var(--bdr);margin-top:4px;display:flex;justify-content:flex-start}
+  .theme-toggle{margin-left:0}
+  [data-theme="light"] .nav-links{background:rgba(242,242,249,.97)}
+  .hero{padding-top:90px;padding-left:20px;padding-right:20px}
+  .metrics{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -354,6 +376,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
       <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
     </button></li>
   </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
@@ -1032,6 +1055,13 @@ window.addEventListener('load', () => {
     }, 720);
   });
 });
+// Mobile hamburger
+(function(){
+  var ham=document.getElementById('navHamburger');
+  var links=document.querySelector('.nav-links');
+  ham.addEventListener('click',function(){ham.classList.toggle('open');links.classList.toggle('open');});
+  links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ham.classList.remove('open');links.classList.remove('open');});});
+})();
 </script>
 </body>
 </html>
