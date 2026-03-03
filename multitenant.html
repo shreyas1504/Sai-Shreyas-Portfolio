@@ -415,7 +415,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   <div class="hero-inner">
     <div class="hero-tag">PM Case Study 001 · B2B SaaS · Architecture + UX</div>
     <h1>The Hidden UX Crisis in<br><em>Multi-Tenant Systems</em></h1>
-    <p class="hero-desc">Every B2B SaaS product has two users nobody designs for. Here's how I identified the problem, mapped it to real impact, and redesigned the experience — drawing from building a live multi-tenant e-invoicing platform across 3 countries.</p>
+    <p class="hero-desc">Every B2B SaaS product has two users nobody designs for. Here's how I identified the problem, mapped it to real impact, and redesigned the experience while drawing from building a live multi-tenant e-invoicing platform across 3 countries.</p>
     <div class="hero-meta">
       <div class="meta-i"><span class="meta-l">Domain</span><span class="meta-v">B2B SaaS / Enterprise</span></div>
       <div class="meta-i"><span class="meta-l">Methods</span><span class="meta-v">UX Audit · JTBD · RICE</span></div>
@@ -432,7 +432,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 <section class="section" id="problem">
   <div class="sec-label">01 — Problem Framing</div>
   <h2>The two users<br>everyone ignores</h2>
-  <p>When teams build B2B SaaS, they obsess over the end user — the person doing the daily work. But multi-tenant products ship to entire <em>organizations</em>. That creates two hidden personas who make or break adoption, and most products treat them as afterthoughts.</p>
+  <p>When teams build B2B SaaS, they obsess over the end user who is the person doing the daily work. But multi-tenant products ship to entire <em>organizations</em>. That creates two hidden personas who make or break adoption, and most products treat them as afterthoughts.</p>
 
   <div class="highlight rv">
     <p>"We built a great dashboard for finance teams. Then spent 3 months firefighting because workspace admins across 3 countries couldn't configure it correctly. The product was fine. The admin experience was broken."</p>
@@ -468,19 +468,19 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 <section class="section" id="architecture">
   <div class="sec-label">02 — System Architecture</div>
   <h2>What multi-tenancy<br>actually means for PMs</h2>
-  <p>Multi-tenancy isn't a backend concern — it's the decision that determines which features you can ever build. One application serves multiple organizations simultaneously, sharing infrastructure while keeping each tenant's data completely isolated.</p>
+  <p>Multi-tenancy isn't a backend concern for PMs. It's the decision that determines which features you can ever build. One application serves multiple organizations simultaneously, sharing infrastructure while keeping each tenant's data completely isolated.</p>
 
   <div class="arch-diagram rv d1">
     <div class="arch-header">
       <span class="arch-header-title">Multi-Tenant Architecture Stack</span>
-      <span class="arch-header-badge">Figma-ready · export each layer as a component</span>
+      <span class="arch-header-badge">Figma ready · export each layer as a component</span>
     </div>
     <div class="arch-body">
       <div class="arch-layer">
         <div class="arch-row">
           <div class="arch-icon">🌐</div>
           <div class="arch-name">Presentation Layer</div>
-          <div class="arch-detail">Single UI codebase · tenant-aware rendering</div>
+          <div class="arch-detail">Single UI codebase · tenant aware rendering</div>
         </div>
       </div>
       <div class="arch-connector"></div>
@@ -522,7 +522,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
           <div class="arch-tenant-sub">Isolated DB · 5,000 users · SG · GDPR</div>
         </div>
       </div>
-      <div class="figma-note rv">⬡ Each layer maps 1:1 to a named frame in Figma — designed for LinkedIn architecture posts and slide decks.</div>
+      <div class="figma-note rv">⬡ Each layer maps 1:1 to a named frame in Figma . Designed for LinkedIn architecture posts and slide decks.</div>
     </div>
   </div>
 
@@ -545,7 +545,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 <section class="section">
   <div class="sec-label">03 — User Research</div>
   <h2>Three personas,<br>one broken system</h2>
-  <p>Through building SMARTeIS — a PEPPOL-compliant e-invoicing platform spanning Malaysia, Indonesia, and Singapore — I mapped the three personas that every multi-tenant product serves, whether it acknowledges them or not.</p>
+  <p>Through building SMARTeIS — a PEPPOL-compliant e-invoicing platform spanning Malaysia, Indonesia, and Singapore where I mapped the three personas that every multi-tenant product serves, whether it acknowledges them or not.</p>
   <div class="persona-row">
     <div class="persona-card rv">
       <div class="persona-icon">👤</div>
@@ -565,7 +565,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
       <div class="persona-icon">⚙️</div>
       <div class="persona-name">Platform Operator</div>
       <div class="persona-role">Product/Ops Team · Daily User</div>
-      <p class="persona-pain">Manages all tenants. Knows nothing about individual tenant health. Learns about problems through support tickets — always too late.</p>
+      <p class="persona-pain">Manages all tenants. Knows nothing about individual tenant health. Learns about problems through support tickets and always too late.</p>
       <div class="persona-quote">"We found out an entire company's invoices were failing compliance checks when they threatened to cancel."</div>
     </div>
   </div>
@@ -594,7 +594,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
     <div class="insight-block rv"><div class="insight-num">01</div><h3>Zero setup guidance</h3><p>Admins land with no configuration checklist and no indication of what's required before their team can use the product effectively.</p></div>
     <div class="insight-block rv d1"><div class="insight-num">02</div><h3>No workspace health view</h3><p>Once users are onboarded, the Admin has no dashboard showing activation rates, feature adoption by role, or compliance status.</p></div>
     <div class="insight-block rv d2"><div class="insight-num">03</div><h3>Permission changes are invisible</h3><p>When roles are updated, workflows break silently. There's no audit log the Admin can understand without being a technical user.</p></div>
-    <div class="insight-block rv d3"><div class="insight-num">04</div><h3>Multi-country complexity ignored</h3><p>Products treat all tenants identically. But a Malaysian team and a Singapore team have different tax obligations, workflows, and risk profiles.</p></div>
+    <div class="insight-block rv d3"><div class="insight-num">04</div><h3>Multi country complexity ignored</h3><p>Products treat all tenants identically. But a Malaysian team and a Singapore team have different tax obligations, workflows, and risk profiles.</p></div>
   </div>
 </section>
 
@@ -691,7 +691,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
             <div><span class="badge-role" style="background:rgba(254,188,46,.1);color:#febc2e;border:1px solid rgba(254,188,46,.2)">At risk</span></div>
             <div style="text-align:right"><button class="btn-primary-sm" style="padding:5px 10px;font-size:11px">Nudge</button></div>
           </div>
-          <div class="success-annotation">Tenant Admin now sees activation health, compliance status, and at-risk users — proactively, before problems escalate to support tickets or contract cancellation.</div>
+          <div class="success-annotation">Tenant Admin now sees activation health, compliance status, and at-risk users in real time. They can take action proactively, before problems escalate to support tickets or contract cancellation.</div>
         </div>
       </div>
     </div>
@@ -707,8 +707,8 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   <p>With limited engineering bandwidth, I used RICE scoring to prioritize the three core improvements to the Tenant Admin experience.</p>
   <div class="framework-grid">
     <div class="fw-card rv"><div class="fw-rank">1</div><div class="fw-label">Highest Priority</div><div class="fw-title">Workspace Health Dashboard</div><p style="font-size:14px;max-width:100%">Activity summaries, compliance status, and at-risk user signals. Highest reach because every Tenant Admin uses it weekly. Directly maps to churn prevention.</p><div class="fw-reach"><span class="fw-reach-label">RICE</span><div class="fw-reach-bar"><div class="fw-reach-fill" style="width:92%"></div></div><span style="font-size:11px;color:var(--accent);font-family:'DM Mono',monospace">92</span></div></div>
-    <div class="fw-card rv d1"><div class="fw-rank">2</div><div class="fw-label">High Priority</div><div class="fw-title">Setup Completion Checklist</div><p style="font-size:14px;max-width:100%">Step-by-step onboarding guide for Tenant Admins with progress tracking. Reduces time-to-value and support tickets during first 30 days.</p><div class="fw-reach"><span class="fw-reach-label">RICE</span><div class="fw-reach-bar"><div class="fw-reach-fill" style="width:74%"></div></div><span style="font-size:11px;color:var(--accent);font-family:'DM Mono',monospace">74</span></div></div>
-    <div class="fw-card rv d2"><div class="fw-rank">3</div><div class="fw-label">Medium Priority</div><div class="fw-title">Human-Readable Audit Log</div><p style="font-size:14px;max-width:100%">Plain-English activity feed showing "Rahul's permissions changed by Ananya on Feb 3." Currently only readable by engineers. High effort, major pain point.</p><div class="fw-reach"><span class="fw-reach-label">RICE</span><div class="fw-reach-bar"><div class="fw-reach-fill" style="width:55%"></div></div><span style="font-size:11px;color:var(--accent);font-family:'DM Mono',monospace">55</span></div></div>
+    <div class="fw-card rv d1"><div class="fw-rank">2</div><div class="fw-label">High Priority</div><div class="fw-title">Setup Completion Checklist</div><p style="font-size:14px;max-width:100%">Step by step onboarding guide for Tenant Admins with progress tracking. Reduces time to value and support tickets during the first 30 days.</p><div class="fw-reach"><span class="fw-reach-label">RICE</span><div class="fw-reach-bar"><div class="fw-reach-fill" style="width:74%"></div></div><span style="font-size:11px;color:var(--accent);font-family:'DM Mono',monospace">74</span></div></div>
+    <div class="fw-card rv d2"><div class="fw-rank">3</div><div class="fw-label">Medium Priority</div><div class="fw-title">Human Readable Audit Log</div><p style="font-size:14px;max-width:100%">Plain English activity feed showing "Rahul's permissions changed by Ananya on Feb 3." Currently only readable by engineers. High effort, major pain point.</p><div class="fw-reach"><span class="fw-reach-label">RICE</span><div class="fw-reach-bar"><div class="fw-reach-fill" style="width:55%"></div></div><span style="font-size:11px;color:var(--accent);font-family:'DM Mono',monospace">55</span></div></div>
   </div>
 </section>
 
@@ -718,7 +718,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 <section class="section" id="metrics">
   <div class="sec-label">07 — Success Metrics</div>
   <h2>How I'd measure<br>if this worked</h2>
-  <p>Good PM work defines success metrics before building. These are the four KPIs that would validate the redesign — each mapped to a specific business outcome, not just a feature metric.</p>
+  <p>Good PM work defines success metrics before building. These are the four KPIs that would validate the redesign of the Tenant Admin experience: each mapped to a specific business outcome, not just a feature metric.</p>
   <div class="metrics-grid">
     <div class="metric-card rv"><div class="metric-number">↓40%</div><div class="metric-unit">Target</div><div class="metric-desc">Reduction in Tenant Admin support tickets within 60 days of dashboard launch</div></div>
     <div class="metric-card rv d1"><div class="metric-number">↑25%</div><div class="metric-unit">Target</div><div class="metric-desc">Increase in 30-day team activation rate — % of invited users completing core actions</div></div>
@@ -734,10 +734,10 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   <div class="sec-label">08 — Key Learnings</div>
   <h2>What building multi-tenant<br>products actually taught me</h2>
   <div class="learnings-list">
-    <div class="learning-item rv"><div class="learning-num">01</div><div class="learning-text"><h3>Compliance is a UX problem, not just a legal one</h3><p>Working across Malaysia, Indonesia, and Singapore, I saw that different tax authorities, invoice formats, and submission deadlines create user confusion. Translate compliance constraints into clear, contextual UI moments — don't hide them in error messages.</p></div></div>
+    <div class="learning-item rv"><div class="learning-num">01</div><div class="learning-text"><h3>Compliance is a UX problem, not just a legal one</h3><p>Working across Malaysia, Indonesia, and Singapore, I saw that different tax authorities, invoice formats, and submission deadlines create user confusion. Translate compliance constraints into clear, contextual UI moments so users don't hide them in error messages.</p></div></div>
     <div class="learning-item rv d1"><div class="learning-num">02</div><div class="learning-text"><h3>Your admin user IS your sales motion</h3><p>In B2B SaaS, the Tenant Admin expands the contract, advocates internally, and decides whether to roll the product out to more teams. Every hour saved for a Tenant Admin is a direct input into expansion revenue.</p></div></div>
-    <div class="learning-item rv d2"><div class="learning-num">03</div><div class="learning-text"><h3>Multi-tenant metrics need tenant-level segmentation</h3><p>Global DAU is meaningless when your product serves 50 organizations. A large, low-engagement tenant masks a small, highly-engaged one. Build tenant-level health scores into your analytics from day one.</p></div></div>
-    <div class="learning-item rv d3"><div class="learning-num">04</div><div class="learning-text"><h3>Customization vs. standardization is the hardest PM tradeoff</h3><p>Every enterprise asks for custom workflows. Saying yes to everything creates an unmaintainable product. Find the 20% of customization that satisfies 80% of enterprise needs — and build configuration, not bespoke code, for everything else.</p></div></div>
+    <div class="learning-item rv d2"><div class="learning-num">03</div><div class="learning-text"><h3>Multi-tenant metrics need tenant level segmentation</h3><p>Global DAU is meaningless when your product serves 50 organizations. A large, low-engagement tenant masks a small, highly-engaged one. Build tenant level health scores into your analytics from day one.</p></div></div>
+    <div class="learning-item rv d3"><div class="learning-num">04</div><div class="learning-text"><h3>Customization vs. standardization is the hardest PM tradeoff</h3><p>Every enterprise asks for custom workflows. Saying yes to everything creates an unmaintainable product. Find the 20% of customization that satisfies 80% of enterprise needs and let the rest be standardized and build configuration, not bespoke code, for everything else.</p></div></div>
   </div>
 </section>
 
@@ -754,7 +754,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
     </div>
     <div class="cta-right">
       <div class="cta-also">Also in the pipeline</div>
-      <div class="coming-card"><div class="coming-title">003 — AI Safety, Evaluation &amp; Rollback</div><div class="coming-sub">AI Safety · Infra-Adjacent · B2C Consumer</div></div>
+      <div class="coming-card"><div class="coming-title">003 — AI Safety, Evaluation &amp; Rollback</div><div class="coming-sub">AI Safety · Infra Adjacent · B2C Consumer</div></div>
       <div class="coming-card"><div class="coming-title">004 — Why Fintech Onboarding Loses You at Step 3</div><div class="coming-sub">Compliance UX · Fintech · Funnel Analysis</div></div>
       <div style="margin-top:24px"><a href="mailto:sv3233@nyu.edu" class="btn-cta" style="background:transparent;border:1px solid #f97316;color:#f97316;box-shadow:none" onmouseover="this.style.background='rgba(249,115,22,.12)';this.style.boxShadow='0 4px 20px rgba(249,115,22,.25)'" onmouseout="this.style.background='transparent';this.style.boxShadow='none'">Get in touch →</a></div>
     </div>
@@ -762,7 +762,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
 </div>
 
 <footer>
-  <span class="footer-name">Sai Shreyas Vyamajala — NYU MOT '27</span>
+  <span class="footer-name">Sai Shreyas Vyamajala · NYU MOT '27</span>
   <div class="footer-links">
     <a href="https://linkedin.com/in/shreyas1504" target="_blank">LinkedIn</a>
     <a href="mailto:sv3233@nyu.edu">Email</a>

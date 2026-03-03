@@ -385,7 +385,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   <div class="hero-glow2"></div>
   <div class="hero-eyebrow">Case Study / 002 / AI · B2B Product Strategy</div>
   <h1 class="hero-h">AI Product<br>Ops <em>Co‑pilot</em></h1>
-  <p class="hero-sub">PMs lose <strong>40% of their week</strong> to status syncs and ticket triage. I designed a purpose-built AI assistant — and worked through the full product, architecture, and trust decisions needed to ship it responsibly at B2B scale.</p>
+  <p class="hero-sub">PMs lose <strong>40% of their week</strong> to status syncs and ticket triage. I designed a purpose-built AI assistant and worked through the full product, architecture, and trust decisions needed to ship it responsibly at B2B scale.</p>
   <div class="hero-tags">
     <span class="tag v">Product Strategy</span>
     <span class="tag v">LLM Architecture</span>
@@ -413,13 +413,13 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   </div>
   <div class="sec-body">
     <h2 class="sh rv">Not a textbook problem.<br><em>I watched it happen.</em></h2>
-    <p class="sp rv d1">During my SDE internship building the SMARTeIS multi-tenant invoicing platform at Skill Quotient Group, I was in a lot of the same Slack channels as the PM team. And I kept noticing the same pattern play out every week — the PM would spend Monday morning writing the same project context three times: once in a Jira comment, once in a stakeholder email, once in a Slack update to the Eng lead.</p>
+    <p class="sp rv d1">During my SDE internship building the SMARTeIS multi-tenant invoicing platform at Skill Quotient Group, I was in a lot of the same Slack channels as the PM team. And I kept noticing the same pattern play out every week as the PM would spend Monday morning writing the same project context three times: once in a Jira comment, once in a stakeholder email, once in a Slack update to the Eng lead.</p>
     <p class="sp rv d2">Nothing was wrong. The PM was competent. The tools worked fine. But the <strong>tools didn't talk to each other</strong>, didn't remember context, and couldn't draft anything. Every week started from zero. When I mentioned this to our PM, he said something that stuck with me:</p>
     <div class="pq rv d3">
       <p>"I'm basically a human ETL pipeline. I ingest status from five places and output the same summary six times a week."</p>
       <cite>— PM, Skill Quotient Group</cite>
     </div>
-    <p class="sp rv">That sentence became the seed of this case study. I started asking more questions — what does a PM actually spend time on? What parts add creative value, and what parts are just translation work? Eight user interviews later, I had a much clearer picture of the problem.</p>
+    <p class="sp rv">That sentence became the seed of this case study. I started asking more questions about what does a PM actually spend time on? What parts add creative value, and what parts are just translation work? Eight user interviews later, I had a much clearer picture of the problem.</p>
     <div class="hl v rv d1">💡 Honest disclaimer: This is a portfolio case study, not a shipped product. I conducted real user research, then worked through the full product + architecture decisions as if I were the PM building it. The goal is to show how I think through hard product problems end-to-end.</div>
   </div>
 </section>
@@ -432,7 +432,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   </div>
   <div class="sec-body">
     <h2 class="sh rv">What I actually<br><em>learned from PMs.</em></h2>
-    <p class="sp rv d1">I ran 8 semi-structured interviews over two weeks — 5 PMs I connected with through NYU's MOT program, 2 from my internship context, and 1 cold outreach to a PM at a B2B SaaS company. My goal was to understand <em>where time actually goes</em>, not validate a pre-existing hypothesis.</p>
+    <p class="sp rv d1">I ran 8 semi-structured interviews over two weeks with 5 PMs I connected with through NYU's MOT program, 2 from my internship context, and 1 cold outreach to a PM at a B2B SaaS company. My goal was to understand <em>where time actually goes</em>, not validate a pre-existing hypothesis.</p>
 
     <h3 class="sh3 rv">Research Methodology</h3>
     <div class="fwbox rv d1">
@@ -448,7 +448,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
       <div class="card r">
         <span class="card-tag">Pain #1 — Most Common</span>
         <h4>Status communication is the real killer</h4>
-        <p>7 of 8 PMs mentioned this unprompted. Writing the same project status for different audiences (engineering, leadership, sales, customers) took 3–5 hours/week. The frustration wasn't volume — it was that they were writing the same thing over and over with minor reframes.</p>
+        <p>7 of 8 PMs mentioned this unprompted. Writing the same project status for different audiences (engineering, leadership, sales, customers) took 3–5 hours/week. The frustration wasn't volume of work, it was that they were writing the same thing over and over with minor reframes.</p>
       </div>
       <div class="card r">
         <span class="card-tag">Pain #2 — Most Nuanced</span>
@@ -458,7 +458,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
       <div class="card o">
         <span class="card-tag">Surprise Finding</span>
         <h4>PMs don't want AI to replace them — they want a first draft</h4>
-        <p>When I asked "would you want AI to write your status updates automatically?", 6/8 said no — they feared losing their voice. But "would you want AI to draft it and you edit?" got unanimous yes. This reframed my entire product concept.</p>
+        <p>When I asked "would you want AI to write your status updates automatically?", 6/8 said no,they feared losing their voice. But "would you want AI to draft it and you edit?" got unanimous yes. This reframed my entire product concept.</p>
       </div>
       <div class="card v">
         <span class="card-tag">Opportunity Unlocked</span>
@@ -473,7 +473,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
     </div>
 
     <h3 class="sh3 rv">Jobs-to-be-Done Framework</h3>
-    <p class="sp rv d1">I translated interview themes into JTBD format — this helped me move from "PM is frustrated" to "what is the PM actually trying to accomplish when they do X?" These became my product requirements anchors.</p>
+    <p class="sp rv d1">I translated interview themes into JTBD format and this helped me move from "PM is frustrated" to "what is the PM actually trying to accomplish when they do X?" These became my product requirements anchors.</p>
     <div class="fwbox rv d2">
       <div class="fwbox-hdr">// Core Jobs to be Done</div>
       <div class="fwbox-row"><div class="fwbox-key">Job 1</div><div class="fwbox-val">When I need to update stakeholders, help me <strong>communicate status without starting from scratch</strong>, so I don't lose 30 minutes writing the same thing I wrote last week</div></div>
@@ -493,7 +493,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   <div class="sec-body">
     <h2 class="sh rv">The tools aren't broken.<br><em>They're blind.</em></h2>
     <p class="sp rv d1">Jira, Notion, Confluence, and Slack are all good at what they do: tracking, documenting, and communicating. But none of them <strong>understand product context</strong>. They're static. They don't know your roadmap priorities. They can't synthesize across sources. They can't tell a new PM why a decision was made.</p>
-    <p class="sp rv d2">This is a product intelligence problem, not a storage problem. The information exists — it's just trapped in disconnected silos, unsearchable by meaning, and unreachable without human translation. PMs are filling that gap with their own time.</p>
+    <p class="sp rv d2">This is a product intelligence problem, not a storage problem. The information exists somewhere, it's just trapped in disconnected silos, unsearchable by meaning, and unreachable without human translation. PMs are filling that gap with their own time.</p>
 
     <div class="grid2 rv d3">
       <div class="card r">
@@ -593,7 +593,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
         <div class="p-items">
           <div class="p-item job">Visibility into what AI is doing on my team</div>
           <div class="p-item job">Onboard new PMs to context in days not weeks</div>
-          <div class="p-item job">Accountability layer — who approved what</div>
+          <div class="p-item job">Accountability layer for who approved what</div>
         </div>
         <div class="p-quote">"I need confidence this is accurate and that there's a human in the loop before anything goes out."</div>
       </div>
@@ -627,24 +627,24 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   </div>
   <div class="sec-body">
     <h2 class="sh rv">How I'd actually<br><em>build this.</em></h2>
-    <p class="sp rv d1">The co-pilot is a <strong>Retrieval-Augmented Generation (RAG)</strong> system that sits on top of your existing product stack. It doesn't replace your tools — it reads them, builds a semantic index of all your product context, and answers queries against that live index with citations. Here's why I made the core architecture decisions I did.</p>
+    <p class="sp rv d1">The co-pilot is a <strong>Retrieval-Augmented Generation (RAG)</strong> system that sits on top of your existing product stack. It doesn't replace your tools or your LLMs. It reads them, builds a semantic index of all your product context, and answers queries against that live index with citations. Here's why I made the core architecture decisions I did.</p>
 
     <h3 class="sh3 rv">Why RAG, not Fine-tuning?</h3>
     <div class="grid2 rv d1">
       <div class="card r">
         <span class="card-tag">Fine-tuning — Why I Ruled It Out</span>
-        <p>Fine-tuning bakes a snapshot of your product context into model weights. When the roadmap changes next sprint, your model is out of date. Retraining is expensive, slow, and means the model's reasoning is invisible — you can't point to the source of an answer. For a trust-critical enterprise product, that's a dealbreaker.</p>
+        <p>Fine-tuning bakes a snapshot of your product context into model weights. When the roadmap changes next sprint, your model is out of date. Retraining is expensive, slow, and means the model's reasoning is invisible to the PM. you can't point to the source of an answer. For a trust-critical enterprise product, that's a dealbreaker.</p>
       </div>
       <div class="card g">
         <span class="card-tag">RAG — Why It Fits</span>
-        <p>RAG retrieves live documents at query time. Always current. Every answer cites a specific source the PM can verify. Org data never leaves your infrastructure — the LLM only sees the relevant chunks retrieved for that query, not all your raw data. Permission-gating happens at retrieval time, not just at the UI layer.</p>
+        <p>RAG retrieves live documents at query time. Always current. Every answer cites a specific source the PM can verify. Org data never leaves your infrastructure , so the LLM only sees the relevant chunks retrieved for that query, not all your raw data. Permission-gating happens at retrieval time, not just at the UI layer.</p>
       </div>
     </div>
 
     <h3 class="sh3 rv d1">Full System Architecture</h3>
     <div class="arch rv d2">
       <div class="arch-hdr">
-        <div class="arch-hdr-title">// AI Product Ops Co-pilot — RAG Architecture</div>
+        <div class="arch-hdr-title">// AI Product Ops Co-pilot · RAG Architecture</div>
         <div class="arch-hdr-badge">Production Design</div>
       </div>
       <div class="arch-body">
@@ -687,7 +687,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
       <div class="flow-step"><div class="fs-icon g">✅</div><div class="fs-lbl">5 — PM Review</div><div class="fs-desc">Human edits, approves, sends. Always.</div></div>
     </div>
 
-    <div class="hl c rv d3">🔐 Permission scoping is the hardest problem here. When one user's AI can potentially surface another user's confidential docs, you don't have a features problem — you have an IAM problem. Retrieval must be permission-gated at the vector store level, not just filtered at the UI after fetching. This was the key architecture constraint I discovered through research.</div>
+    <div class="hl c rv d3">🔐 Permission scoping is the hardest problem here. When one user's AI can potentially surface another user's confidential docs, you don't have a features problem but you have an IAM problem. Retrieval must be permission-gated at the vector store level, not just filtered at the UI after fetching. This was the key architecture constraint I discovered through research.</div>
   </div>
 </section>
 
@@ -699,7 +699,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   </div>
   <div class="sec-body">
     <h2 class="sh rv">Design for<br><em>humans reviewing AI,</em><br>not AI replacing humans.</h2>
-    <p class="sp rv d1">My research finding — that PMs want a fast first draft, not AI making decisions for them — became the entire UX principle: the co-pilot <em>always drafts</em>, the PM <em>always approves</em>. This isn't a limitation. It's the product's core trust mechanism and what makes it actually adoptable in an enterprise environment.</p>
+    <p class="sp rv d1">My research finding was that PMs want a fast first draft, not AI making decisions for them to review. It became the entire UX principle: the co-pilot <em>always drafts</em>, the PM <em>always approves</em>. This isn't a limitation. It's the product's core trust mechanism and what makes it actually adoptable in an enterprise environment.</p>
 
     <h3 class="sh3 rv">Core UX Principles</h3>
     <div class="grid3 rv d1">
@@ -735,7 +735,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
         <div style="max-width:82%">
           <div class="chat-bubble bot">
             <strong>Draft: Sprint 23 Stakeholder Update</strong><br><br>
-            This week's sprint completed 8 of 10 planned tickets. The Notification System (Epic #247) has been moved to Sprint 24 — a third-party webhook reliability issue was discovered during QA on Tuesday, and the team made the call to defer rather than ship with a known intermittent failure. All other deliverables shipped as planned, including search indexing improvements (+23% query speed) and the user onboarding flow redesign.<br><br>
+            This week's sprint completed 8 of 10 planned tickets. The Notification System (Epic #247) has been moved to Sprint 24 to address a third-party webhook reliability issue was discovered during QA on Tuesday, and the team made the call to defer rather than ship with a known intermittent failure. All other deliverables shipped as planned, including search indexing improvements (+23% query speed) and the user onboarding flow redesign.<br><br>
             <em style="font-size:11px;color:var(--muted)">Confidence: High · 6 sources · Jira Sprint 23, Slack #eng-q3, Notion PRD-247</em>
           </div>
           <div class="chat-cite"><strong>Sources used:</strong> Jira Sprint 23 board · Slack #product-updates (Tue 4:22PM) · Notification System PRD v2.1</div>
@@ -777,7 +777,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   </div>
   <div class="sec-body">
     <h2 class="sh rv">What I'd actually<br><em>ship first.</em></h2>
-    <p class="sp rv d1">One of the things I got wrong in my first draft of this case study: I designed the whole system. That's not PM thinking — that's engineering thinking. A PM asks: <strong>what's the smallest version of this that delivers real value and teaches us something important?</strong></p>
+    <p class="sp rv d1">One of the things I got wrong in my first draft of this case study: I designed the whole system. That's not PM thinking, that's engineering thinking. A PM asks: <strong>what's the smallest version of this that delivers real value and teaches us something important?</strong></p>
     <p class="sp rv d2">I applied MoSCoW to scope the MVP. The constraint: 8-week sprint, 2 engineers, 1 PM (me). No ML team. Must use existing LLM APIs.</p>
 
     <h3 class="sh3 rv">MoSCoW Analysis</h3>
@@ -936,7 +936,7 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
   </div>
   <div class="sec-body">
     <h2 class="sh rv">What building this<br><em>actually taught me.</em></h2>
-    <p class="sp rv d1">This case study started as a half-baked idea from watching a PM copy-paste context across five Slack channels. Turning it into a full product strategy forced me to be honest about what I didn't know — and figure it out.</p>
+    <p class="sp rv d1">This case study started as a half-baked idea from watching a PM copy-paste context across five Slack channels. Turning it into a full product strategy forced me to be honest about what I didn't know and what I did know and figure it out.</p>
 
     <div class="rv d2">
       <div class="lr">
@@ -957,21 +957,21 @@ p.sp em{color:var(--accent2);font-style:normal;font-weight:500}
         <div class="lr-n">03</div>
         <div>
           <div class="lr-h">Architecture decisions are PM decisions</div>
-          <div class="lr-d">Choosing RAG over fine-tuning isn't just a technical call — it determines your accuracy maintenance costs, your data privacy posture, whether answers are explainable, and how stale your model goes when the roadmap changes. As a CS-background PM, understanding these tradeoffs at a conceptual level (not an implementation level) made my product strategy significantly sharper. I learned to ask: what does this architecture choice make easy or hard for users?</div>
+          <div class="lr-d">Choosing RAG over fine-tuning isn't just a technical call but it determines your accuracy maintenance costs, your data privacy posture, whether answers are explainable, and how stale your model goes when the roadmap changes. As a CS-background PM, understanding these tradeoffs at a conceptual level (not an implementation level) made my product strategy significantly sharper. I learned to ask: what does this architecture choice make easy or hard for users?</div>
         </div>
       </div>
       <div class="lr">
         <div class="lr-n">04</div>
         <div>
           <div class="lr-h">The "PM as editor" model unlocked adoption thinking</div>
-          <div class="lr-d">Framing the co-pilot as "AI that drafts, PM that edits" wasn't just a nice UX principle — it changed the entire adoption strategy. PMs who feared being replaced became PMs excited about getting their Monday mornings back. The product I designed around that one insight is more adoptable, more trustworthy, and more honest about what AI is actually good at.</div>
+          <div class="lr-d">Framing the co-pilot as "AI that drafts, PM that edits" wasn't just a nice UX principle but it changed the entire adoption strategy. PMs who feared being replaced became PMs excited about getting their Monday mornings back. The product I designed around that one insight is more adoptable, more trustworthy, and more honest about what AI is actually good at.</div>
         </div>
       </div>
       <div class="lr" style="border-bottom:none">
         <div class="lr-n">05</div>
         <div>
           <div class="lr-h">Research found the product I didn't know I was building</div>
-          <div class="lr-d">I went into the interviews expecting to validate that "AI for PMs = automation." What I found was that PMs don't want automation — they want amplification. That's a completely different product. The interviews saved me from building the wrong thing entirely. I now understand why "start with research" isn't a platitude — it's the only way to build something people actually want to use.</div>
+          <div class="lr-d">I went into the interviews expecting to validate that "AI for PMs = automation." What I found was that PMs don't want automation, they want amplification. That's a completely different product. The interviews saved me from building the wrong thing entirely. I now understand why "start with research" isn't a platitude, it's the only way to build something people actually want to use.</div>
         </div>
       </div>
     </div>

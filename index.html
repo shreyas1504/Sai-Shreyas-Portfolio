@@ -53,6 +53,7 @@ nav{position:fixed;top:0;width:100%;z-index:400;height:58px;display:flex;align-i
 .theme-toggle:hover{background:rgba(108,99,255,.14);border-color:rgba(108,99,255,.3);color:var(--accent)}
 .icon-sun{display:block}.icon-moon{display:none}
 [data-theme="light"] .icon-sun{display:none}[data-theme="light"] .icon-moon{display:block}
+.nav-right{display:flex;align-items:center;gap:4px}
 /* HERO */
 .hero{min-height:100vh;display:flex;align-items:center;padding:150px 52px 90px;max-width:1120px;margin:0 auto;position:relative;overflow:hidden}
 .hero-grid-bg{position:fixed;inset:0;pointer-events:none;
@@ -192,7 +193,7 @@ nav{padding:0 22px}
 hr.div{margin:0 24px;max-width:unset}
 .about-grid{grid-template-columns:1fr}
 .photo-col{position:static;order:-1}
-.photo-wrap{max-width:260px}
+.photo-wrap{max-width:260px;margin:0 auto}
 .photo-cards{grid-template-columns:repeat(4,1fr)}
 .case-grid,.phi-grid{grid-template-columns:1fr}
 .contact-wrap{grid-template-columns:1fr;padding:60px 24px}
@@ -215,8 +216,6 @@ footer{padding:20px 24px;flex-direction:column;gap:8px}
   .nav-links li{width:100%}
   .nav-links a{display:block;padding:12px 16px;border-radius:8px;font-size:15px}
   .nav-cta{margin-left:0!important;margin-top:6px;display:block;text-align:center!important;padding:12px 16px!important}
-  .nav-links li:last-child{padding-top:8px;border-top:1px solid var(--border);margin-top:4px;display:flex;justify-content:flex-start}
-  .theme-toggle{margin-left:0}
   [data-theme="light"] .nav-links{background:rgba(242,242,249,.97)}
   .hero{padding:100px 20px 70px}
   h1{font-size:clamp(36px,9vw,54px)!important}
@@ -234,17 +233,19 @@ footer{padding:20px 24px;flex-direction:column;gap:8px}
 <div id="bar"></div>
 <nav>
   <a href="index.html" class="logo"><div class="live"></div>Sai Shreyas Vyamajala 👋</a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#work">Case Studies</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="mailto:sv3233@nyu.edu" class="nav-cta">Get in touch</a></li>
-    <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Case Studies</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="mailto:sv3233@nyu.edu" class="nav-cta">Get in touch</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
       <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
       <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-    </button></li>
-  </ul>
-  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+    </button>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+  </div>
 </nav>
 
 <!-- ─── HERO ─── -->
@@ -255,7 +256,7 @@ footer{padding:20px 24px;flex-direction:column;gap:8px}
     <div class="hero-pill">SDE → PM · NYU MOT '27 · Open to Summer 2026</div>
     <h1>Engineer who thinks<br>like a <em>product person.</em></h1>
     <p class="hero-sub">
-      I'm Sai Shreyas — CS engineer transitioning into product management.
+      I'm Sai Shreyas Vyamajala, a CS engineer transitioning into product management.
       I worked on the execution of <strong>multi-tenant e-invoicing platform which is in use across 3 countries</strong> as an SDE intern,
       watched real users struggle with what we shipped, and now apply that engineering
       context to ask sharper product questions.
@@ -287,22 +288,22 @@ footer{padding:20px 24px;flex-direction:column;gap:8px}
       <p class="rv">
         Computer Engineering at <strong>Thapar Institute of Engineering &amp; Technology</strong> (2021–2025),
         now MS in Management of Technology at <strong>NYU Tandon</strong>.
-        I came into product through the build side — writing React components, wiring REST APIs,
+        I came into product through the build side of things: writing React components, wiring REST APIs,
         delivering Jira tickets across two week sprints and found myself constantly asking questions engineers weren't supposed to ask:
         <em>Why is this screen designed like this? Who actually uses this flow? Why does onboarding keep failing?</em>
       </p>
       <p class="rv d1">
         That shift crystallised at <strong>Skill Quotient Group in Kuala Lumpur</strong>, where I spent 5 months
-        as an SDE intern working on SMARTeIS — a <em>PEPPOL-compliant multi-tenant e-invoicing platform</em>
+        as an SDE intern working on SMARTeIS which is a <em>PEPPOL-compliant multi-tenant e-invoicing platform</em>
         across Malaysia, Indonesia, Singapore and U.A.E. I was wiring the React views to REST APIs and
         delivering sprint tickets, but I was also sitting in rooms watching <strong>Tenant Admins struggle
         to configure a product we'd just built</strong>. That gap between what shipped and what users needed
         is what pushed me toward product.
       </p>
       <p class="rv d2">
-        Before that, at <strong>Legitimate India</strong>, I did product and market research —
-        10+ interviews with legal professionals, 15+ platform benchmarks, Figma wireframes —
-        not as a PM officially, but doing PM work. I also led <strong>FROSH</strong>,
+        Before that, at <strong>Legitimate India</strong>, I did product and market research with
+        10+ interviews with legal professionals, 15+ platform benchmarks, Figma wireframes but
+        not as a PM officially, but doing PM work for a Linkeldn style platform for lawyers in India. I also led <strong>FROSH</strong>,
         a campus utility app for Thapar's orientation week, which reached
         <strong>2,000+ organic downloads</strong> in its first semester and shipped 5+ releases
         based on real crash and engagement data.
@@ -334,7 +335,7 @@ footer{padding:20px 24px;flex-direction:column;gap:8px}
           <div class="tl-d">Aug 2025 → now</div>
           <div>
             <div class="tl-t">NYU — MS Management of Technology</div>
-            <div class="tl-s">New York. Studying Product Management, Data Analytics, Financial Planning and Supply Chain. Awarded an $18K merit scholarship.</div>
+            <div class="tl-s">New York. Studying Product Management, Data Visualization and Business Analytics, Financial Planning and Supply Chain Management. Awarded an $18K merit scholarship.</div>
           </div>
         </div>
         <div class="tl-row rv d1">
@@ -519,6 +520,7 @@ document.querySelectorAll(".rv").forEach(el => io.observe(el));
 // Page transitions
 function goTo(href) {
   const pt = document.getElementById("pt");
+  pt.classList.remove("in");
   pt.classList.add("go");
   pt.style.pointerEvents = "all";
   setTimeout(() => window.location.href = href, 540);
