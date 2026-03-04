@@ -6,6 +6,7 @@
 <title>Multi-Tenant Systems — Sai Shreyas Vyamajala</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <script>(function(){var t=localStorage.getItem('theme');if(t==='light')document.documentElement.setAttribute('data-theme','light');})()</script>
 <style>
 :root {
@@ -112,7 +113,7 @@ p{color:#b0b0c8;font-size:16px;line-height:1.8;max-width:680px}
 .arch-row:hover{background:rgba(255,255,255,.055)}
 .arch-row.hl{background:rgba(108,99,255,.08);border-color:rgba(108,99,255,.18)}
 .arch-row.hl:hover{background:rgba(108,99,255,.12)}
-.arch-icon{font-size:16px;width:28px;text-align:center;flex-shrink:0}
+.arch-icon{width:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--muted)}
 .arch-name{font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:var(--text);flex:1}
 .arch-detail{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);text-align:right}
 .arch-detail.hot{color:var(--accent)}
@@ -481,7 +482,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
     <div class="arch-body">
       <div class="arch-layer">
         <div class="arch-row">
-          <div class="arch-icon">🌐</div>
+          <div class="arch-icon"><i data-lucide="monitor" style="width:16px;height:16px;stroke-width:1.5"></i></div>
           <div class="arch-name">Presentation Layer</div>
           <div class="arch-detail">Single UI codebase · tenant aware rendering</div>
         </div>
@@ -489,7 +490,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
       <div class="arch-connector"></div>
       <div class="arch-layer">
         <div class="arch-row hl">
-          <div class="arch-icon">🔑</div>
+          <div class="arch-icon"><i data-lucide="key-round" style="width:16px;height:16px;stroke-width:1.5"></i></div>
           <div class="arch-name">Identity &amp; Access Management (IAM)</div>
           <div class="arch-detail hot">▶ PM owns this · RBAC · SSO · Tenant Scoping</div>
         </div>
@@ -497,7 +498,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
       <div class="arch-connector"></div>
       <div class="arch-layer">
         <div class="arch-row hl">
-          <div class="arch-icon">⚙️</div>
+          <div class="arch-icon"><i data-lucide="settings" style="width:16px;height:16px;stroke-width:1.5"></i></div>
           <div class="arch-name">Tenant Management Layer</div>
           <div class="arch-detail hot">▶ PM owns this · Onboarding · Config · Feature Flags · Billing</div>
         </div>
@@ -505,7 +506,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
       <div class="arch-connector"></div>
       <div class="arch-layer">
         <div class="arch-row">
-          <div class="arch-icon">🗄️</div>
+          <div class="arch-icon"><i data-lucide="database" style="width:16px;height:16px;stroke-width:1.5"></i></div>
           <div class="arch-name">Data Isolation Layer</div>
           <div class="arch-detail">Shared DB / Schema-per-tenant / DB-per-tenant</div>
         </div>
@@ -525,7 +526,7 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
           <div class="arch-tenant-sub">Isolated DB · 5,000 users · SG · GDPR</div>
         </div>
       </div>
-      <div class="figma-note rv">⬡ Each layer maps 1:1 to a named frame in Figma . Designed for LinkedIn architecture posts and slide decks.</div>
+      <div class="figma-note rv"><i data-lucide="layers" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i> Each layer maps 1:1 to a named frame in Figma. Designed for LinkedIn architecture posts and slide decks.</div>
     </div>
   </div>
 
@@ -551,21 +552,21 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
   <p>Through building SMARTeIS — a PEPPOL-compliant e-invoicing platform spanning Malaysia, Indonesia, and Singapore where I mapped the three personas that every multi-tenant product serves, whether it acknowledges them or not.</p>
   <div class="persona-row">
     <div class="persona-card rv">
-      <div class="persona-icon">👤</div>
+      <div class="persona-icon"><i data-lucide="user" style="width:22px;height:22px;stroke-width:1.5;color:var(--accent)"></i></div>
       <div class="persona-name">The End User</div>
       <div class="persona-role">Finance Analyst · Daily User</div>
       <p class="persona-pain">Creates invoices, tracks submissions, manages approvals. Switches between ERP and the platform constantly because workflows aren't connected.</p>
       <div class="persona-quote">"I just need to create an invoice and know it was sent. Why does this take 7 steps?"</div>
     </div>
     <div class="persona-card rv d1">
-      <div class="persona-icon">🔑</div>
+      <div class="persona-icon"><i data-lucide="shield" style="width:22px;height:22px;stroke-width:1.5;color:var(--accent2)"></i></div>
       <div class="persona-name">The Tenant Admin</div>
       <div class="persona-role">IT Manager · Weekly User</div>
       <p class="persona-pain">Manages team access, configures regional tax rules, onboards new staff. Has no dashboard showing what's happening in their workspace.</p>
       <div class="persona-quote">"Three people submitted invoices to the wrong tax authority. How do I know who configured what?"</div>
     </div>
     <div class="persona-card rv d2">
-      <div class="persona-icon">⚙️</div>
+      <div class="persona-icon"><i data-lucide="sliders-horizontal" style="width:22px;height:22px;stroke-width:1.5;color:var(--accent3)"></i></div>
       <div class="persona-name">Platform Operator</div>
       <div class="persona-role">Product/Ops Team · Daily User</div>
       <p class="persona-pain">Manages all tenants. Knows nothing about individual tenant health. Learns about problems through support tickets and always too late.</p>
@@ -662,11 +663,11 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
       <div class="redesign-layout">
         <div class="redesign-sidebar">
           <div class="rs-brand"><div class="rs-brand-name">Acme Corp</div><div class="rs-brand-sub">Malaysia · 12 members</div></div>
-          <div class="rs-nav-item active"><span>📊</span>Workspace Health</div>
-          <div class="rs-nav-item"><span>👥</span>Members</div>
-          <div class="rs-nav-item"><span>🔐</span>Permissions</div>
-          <div class="rs-nav-item"><span>📋</span>Audit Log</div>
-          <div class="rs-nav-item"><span>⚙️</span>Configuration</div>
+          <div class="rs-nav-item active"><i data-lucide="activity" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Workspace Health</div>
+          <div class="rs-nav-item"><i data-lucide="users" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Members</div>
+          <div class="rs-nav-item"><i data-lucide="lock" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Permissions</div>
+          <div class="rs-nav-item"><i data-lucide="file-text" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Audit Log</div>
+          <div class="rs-nav-item"><i data-lucide="settings" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Configuration</div>
         </div>
         <div class="rs-main">
           <div class="rs-header">
@@ -856,6 +857,7 @@ document.querySelectorAll('.persona-card,.problem-card,.insight-block,.fw-card,.
   ham.addEventListener('click',function(){ham.classList.toggle('open');links.classList.toggle('open');});
   links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ham.classList.remove('open');links.classList.remove('open');});});
 })();
+lucide.createIcons();
 </script>
 </body>
 </html>
