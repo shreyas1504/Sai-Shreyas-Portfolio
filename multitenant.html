@@ -187,7 +187,6 @@ p{color:#b0b0c8;font-size:16px;line-height:1.8;max-width:680px}
 .mock-dot{width:12px;height:12px;border-radius:50%}
 .mock-dot:nth-child(1){background:#ff5f57}.mock-dot:nth-child(2){background:#febc2e}.mock-dot:nth-child(3){background:#28c840}
 .mock-url{flex:1;background:rgba(255,255,255,.05);border-radius:6px;padding:6px 12px;font-family:'DM Mono',monospace;font-size:11px;color:var(--muted)}
-.mock-frame{width:100%;height:420px;border:none;display:block}
 .admin-layout{display:grid;grid-template-columns:200px 1fr;min-height:380px}
 .admin-sidebar{background:#1a1d21;border-right:1px solid rgba(255,255,255,.06);padding:20px 0}
 .sidebar-section{padding:0 12px;margin-bottom:20px}
@@ -622,9 +621,37 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
         <div class="mock-dots"><div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div></div>
         <div class="mock-url">app.example.com/admin/workspace/members</div>
       </div>
-      <iframe id="before-frame" class="mock-frame"></iframe>
+      <div class="admin-layout">
+        <div class="admin-sidebar">
+          <div class="sidebar-section">
+            <div class="sidebar-title">Workspace</div>
+            <div class="sidebar-item active"><div class="sidebar-dot"></div>Members</div>
+            <div class="sidebar-item"><div class="sidebar-dot"></div>Billing</div>
+            <div class="sidebar-item"><div class="sidebar-dot"></div>Settings</div>
+          </div>
+          <div class="sidebar-section">
+            <div class="sidebar-title">More</div>
+            <div class="sidebar-item"><div class="sidebar-dot"></div>Integrations</div>
+            <div class="sidebar-item"><div class="sidebar-dot"></div>Audit Logs</div>
+          </div>
+        </div>
+        <div class="admin-main">
+          <div class="admin-header">
+            <div class="admin-title">Members</div>
+            <div style="display:flex;gap:10px"><button class="btn-ghost-sm">Export</button><button class="btn-primary-sm">Invite Member</button></div>
+          </div>
+          <table class="data-table">
+            <thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th></tr></thead>
+            <tbody>
+              <tr><td><span class="avatar" style="background:#6c63ff">AM</span>Ananya M.</td><td style="color:var(--muted);font-size:12px">ananya@co.com</td><td><span class="badge-role badge-admin">Admin</span></td><td style="color:var(--muted);font-size:12px">Jan 3, 2025</td></tr>
+              <tr><td><span class="avatar" style="background:#ff6b6b">RK</span>Rahul K.</td><td style="color:var(--muted);font-size:12px">rahul@co.com</td><td><span class="badge-role badge-member">Member</span></td><td style="color:var(--muted);font-size:12px">Jan 5, 2025</td></tr>
+              <tr><td><span class="avatar" style="background:#43e97b">PT</span>Priya T.</td><td style="color:var(--muted);font-size:12px">priya@co.com</td><td><span class="badge-role badge-guest">Guest</span></td><td style="color:var(--muted);font-size:12px">Feb 1, 2025</td></tr>
+            </tbody>
+          </table>
+          <div class="pain-annotation">No activity data, no setup completion status, no health signals. The Admin can see WHO is in the workspace but nothing about what's actually happening. Are these users active? Have they completed setup? Did any invoices fail compliance? Unknown.</div>
+        </div>
+      </div>
     </div>
-    <div class="pain-annotation">No activity data, no setup completion status, no health signals. The Admin can see WHO is in the workspace but nothing about what's actually happening. Are these users active? Have they completed setup? Did any invoices fail compliance? Unknown.</div>
   </div>
 
   <div class="tab-content" id="tab-after">
@@ -633,9 +660,45 @@ footer{padding:28px 48px;display:flex;justify-content:space-between;align-items:
         <div class="mock-dots"><div class="mock-dot"></div><div class="mock-dot"></div><div class="mock-dot"></div></div>
         <div class="mock-url">app.example.com/admin — Workspace Health Dashboard</div>
       </div>
-      <iframe id="after-frame" class="mock-frame"></iframe>
+      <div class="redesign-layout">
+        <div class="redesign-sidebar">
+          <div class="rs-brand"><div class="rs-brand-name">Acme Corp</div><div class="rs-brand-sub">Malaysia · 12 members</div></div>
+          <div class="rs-nav-item active"><i data-lucide="activity" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Workspace Health</div>
+          <div class="rs-nav-item"><i data-lucide="users" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Members</div>
+          <div class="rs-nav-item"><i data-lucide="lock" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Permissions</div>
+          <div class="rs-nav-item"><i data-lucide="file-text" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Audit Log</div>
+          <div class="rs-nav-item"><i data-lucide="settings" style="width:14px;height:14px;stroke-width:1.5;flex-shrink:0"></i>Configuration</div>
+        </div>
+        <div class="rs-main">
+          <div class="rs-header">
+            <div><div class="rs-title">Workspace Health</div><div class="rs-subtitle">Last updated 2 minutes ago · Malaysia workspace</div></div>
+            <button class="btn-primary-sm">+ Invite Member</button>
+          </div>
+          <div class="stats-row">
+            <div class="stat-card"><div class="stat-value">12</div><div class="stat-label">Total Members</div><div class="stat-change">↑ 3 this week</div></div>
+            <div class="stat-card"><div class="stat-value">9</div><div class="stat-label">Active (7d)</div><div class="stat-change">75% activation</div></div>
+            <div class="stat-card"><div class="stat-value">100%</div><div class="stat-label">Compliance</div><div class="stat-change" style="color:var(--accent3)">✓ All clear</div></div>
+            <div class="stat-card"><div class="stat-value">4/5</div><div class="stat-label">Setup Steps</div><div class="stat-change" style="color:#febc2e">1 remaining</div></div>
+          </div>
+          <div class="user-table-row header"><div>Member</div><div>Role</div><div>Activity (7d)</div><div>Status</div><div></div></div>
+          <div class="user-table-row">
+            <div class="user-info"><span class="avatar" style="background:#6c63ff;font-size:11px">AM</span><div><div class="user-name">Ananya M.</div><div class="user-email">ananya@co.com</div></div></div>
+            <div><span class="badge-role badge-admin">Admin</span></div>
+            <div><div class="activity-bar"><div class="activity-fill" style="width:90%"></div></div><div style="font-size:10px;color:var(--muted);margin-top:3px">High</div></div>
+            <div><span class="badge-role" style="background:rgba(67,233,123,.1);color:var(--accent3);border:1px solid rgba(67,233,123,.2)">Active</span></div>
+            <div style="text-align:right"><button class="btn-ghost-sm" style="padding:5px 10px;font-size:11px">Manage</button></div>
+          </div>
+          <div class="user-table-row">
+            <div class="user-info"><span class="avatar" style="background:#ff6b6b;font-size:11px">RK</span><div><div class="user-name">Rahul K.</div><div class="user-email">rahul@co.com</div></div></div>
+            <div><span class="badge-role badge-member">Member</span></div>
+            <div><div class="activity-bar"><div class="activity-fill" style="width:30%;background:linear-gradient(90deg,#febc2e,#ff9a3c)"></div></div><div style="font-size:10px;color:#febc2e;margin-top:3px">Low — nudge?</div></div>
+            <div><span class="badge-role" style="background:rgba(254,188,46,.1);color:#febc2e;border:1px solid rgba(254,188,46,.2)">At risk</span></div>
+            <div style="text-align:right"><button class="btn-primary-sm" style="padding:5px 10px;font-size:11px">Nudge</button></div>
+          </div>
+          <div class="success-annotation">Tenant Admin now sees activation health, compliance status, and at-risk users in real time. They can take action proactively, before problems escalate to support tickets or contract cancellation.</div>
+        </div>
+      </div>
     </div>
-    <div class="success-annotation">Tenant Admin now sees activation health, compliance status, and at-risk users in real time. They can take action proactively, before problems escalate to support tickets or contract cancellation.</div>
   </div>
 </section>
 
@@ -794,18 +857,6 @@ document.querySelectorAll('.persona-card,.problem-card,.insight-block,.fw-card,.
   ham.addEventListener('click',function(){ham.classList.toggle('open');links.classList.toggle('open');});
   links.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ham.classList.remove('open');links.classList.remove('open');});});
 })();
-// Inject iframe srcdoc for Before / After screens
-(function(){
-  var beforeHTML = `<!DOCTYPE html><html><head><meta charset="UTF-8"><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;background:#101420;color:#f1f5f9;font-size:13px}.layout{display:grid;grid-template-columns:200px 1fr;min-height:420px}.sidebar{background:#1a1d21;border-right:1px solid rgba(255,255,255,.06);padding:20px 0}.sidebar-section{padding:0 12px 20px}.sidebar-title{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#64748b;margin-bottom:8px;padding:0 8px}.sidebar-item{display:flex;align-items:center;gap:8px;padding:8px 10px;border-radius:7px;cursor:pointer;font-size:12.5px;color:#94a3b8}.sidebar-item.active{background:rgba(108,99,255,.12);color:#818cf8;font-weight:500}.sidebar-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0}.main{padding:28px 32px}.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.title{font-family:'Syne',sans-serif;font-size:17px;font-weight:700}.btn-primary{background:#818cf8;color:white;border:none;padding:8px 18px;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer}.btn-ghost{background:transparent;color:#94a3b8;border:1px solid rgba(255,255,255,.1);padding:8px 18px;border-radius:8px;font-size:12px;cursor:pointer}table{width:100%;border-collapse:collapse}thead tr{border-bottom:1px solid rgba(255,255,255,.07)}th{text-align:left;font-family:'DM Mono',monospace;font-size:10.5px;color:#64748b;font-weight:400;padding:0 0 12px}td{padding:12px 0;border-bottom:1px solid rgba(255,255,255,.04);font-size:12.5px}.avatar{width:28px;height:28px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;margin-right:10px;vertical-align:middle}.badge{display:inline-block;padding:3px 8px;border-radius:5px;font-size:10.5px;font-weight:500}.badge-admin{background:rgba(108,99,255,.15);color:#818cf8;border:1px solid rgba(108,99,255,.25)}.badge-member{background:rgba(6,182,212,.1);color:#06b6d4;border:1px solid rgba(6,182,212,.2)}.badge-guest{background:rgba(255,255,255,.06);color:#94a3b8;border:1px solid rgba(255,255,255,.1)}.no-signal{margin-top:20px;padding:14px 16px;background:rgba(248,113,113,.06);border:1px dashed rgba(248,113,113,.2);border-radius:8px;color:#94a3b8;font-size:11.5px;font-style:italic;line-height:1.6}</style></head><body><div class="layout"><div class="sidebar"><div class="sidebar-section"><div class="sidebar-title">Workspace</div><div class="sidebar-item active"><div class="sidebar-dot"></div>Members</div><div class="sidebar-item"><div class="sidebar-dot"></div>Billing</div><div class="sidebar-item"><div class="sidebar-dot"></div>Settings</div></div><div class="sidebar-section"><div class="sidebar-title">More</div><div class="sidebar-item"><div class="sidebar-dot"></div>Integrations</div><div class="sidebar-item"><div class="sidebar-dot"></div>Audit Logs</div></div></div><div class="main"><div class="header"><div class="title">Members</div><div style="display:flex;gap:10px"><button class="btn-ghost">Export</button><button class="btn-primary">Invite Member</button></div></div><table><thead><tr><th>Name</th><th>Email</th><th>Role</th><th>Joined</th></tr></thead><tbody><tr><td><span class="avatar" style="background:#6c63ff">AM</span>Ananya M.</td><td style="color:#94a3b8;font-size:12px">ananya@co.com</td><td><span class="badge badge-admin">Admin</span></td><td style="color:#94a3b8;font-size:12px">Jan 3, 2025</td></tr><tr><td><span class="avatar" style="background:#ff6b6b">RK</span>Rahul K.</td><td style="color:#94a3b8;font-size:12px">rahul@co.com</td><td><span class="badge badge-member">Member</span></td><td style="color:#94a3b8;font-size:12px">Jan 5, 2025</td></tr><tr><td><span class="avatar" style="background:#43e97b">PT</span>Priya T.</td><td style="color:#94a3b8;font-size:12px">priya@co.com</td><td><span class="badge badge-guest">Guest</span></td><td style="color:#94a3b8;font-size:12px">Feb 1, 2025</td></tr></tbody></table><div class="no-signal">⚠ No activity data · No setup completion status · No health signals — Admin can see who is in the workspace, but not what is actually happening.</div></div></div></body></html>`;
-
-  var afterHTML = `<!DOCTYPE html><html><head><meta charset="UTF-8"><link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:'DM Sans',sans-serif;background:#101420;color:#f1f5f9;font-size:13px;overflow-x:hidden}.layout{display:grid;grid-template-columns:220px 1fr;min-height:420px}.sidebar{background:#0d0d14;border-right:1px solid rgba(255,255,255,.07);padding:0}.brand{padding:18px 20px;border-bottom:1px solid rgba(255,255,255,.06)}.brand-name{font-family:'Syne',sans-serif;font-size:14px;font-weight:700}.brand-sub{font-size:11px;color:#64748b;margin-top:3px}.nav{padding:12px 0}.nav-item{display:flex;align-items:center;gap:10px;padding:10px 20px;font-size:12.5px;color:#94a3b8;cursor:pointer;position:relative}.nav-item.active{color:#f1f5f9;background:rgba(129,140,248,.08)}.nav-item.active::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:#818cf8;border-radius:0 3px 3px 0}.nav-icon{width:16px;height:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.main{padding:22px 26px;overflow:auto}.page-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:18px}.page-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:700}.page-sub{font-size:11px;color:#64748b;margin-top:3px}.btn-primary{background:#818cf8;color:white;border:none;padding:8px 16px;border-radius:8px;font-size:11.5px;font-weight:600;cursor:pointer}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:18px}.stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:12px 14px}.stat-val{font-family:'Syne',sans-serif;font-size:20px;font-weight:700}.stat-lbl{font-size:11px;color:#64748b;margin-top:3px}.stat-chg{font-size:11px;color:#94a3b8;margin-top:5px}.row-hdr{display:grid;grid-template-columns:2fr 1fr 1.5fr 1fr 80px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07);font-family:'DM Mono',monospace;font-size:10.5px;color:#64748b}.row{display:grid;grid-template-columns:2fr 1fr 1.5fr 1fr 80px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.04);align-items:center}.user-wrap{display:flex;align-items:center;gap:9px}.avatar{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:white;flex-shrink:0}.user-name{font-size:12.5px;font-weight:500}.user-email{font-size:11px;color:#64748b}.badge{display:inline-block;padding:3px 8px;border-radius:5px;font-size:10.5px;font-weight:500}.act-bar{background:rgba(255,255,255,.06);border-radius:4px;height:5px;overflow:hidden}.act-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#818cf8,#a5b4fc)}.act-lbl{font-size:10px;color:#94a3b8;margin-top:3px}.btn-nudge{background:#818cf8;color:white;border:none;padding:5px 12px;border-radius:6px;font-size:11px;cursor:pointer}.btn-manage{background:transparent;color:#94a3b8;border:1px solid rgba(255,255,255,.1);padding:5px 12px;border-radius:6px;font-size:11px;cursor:pointer}svg{stroke:currentColor;fill:none;overflow:visible}</style></head><body><div class="layout"><div class="sidebar"><div class="brand"><div class="brand-name">Acme Corp</div><div class="brand-sub">Malaysia · 12 members</div></div><div class="nav"><div class="nav-item active"><svg class="nav-icon" viewBox="0 0 24 24" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Workspace Health</div><div class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Members</div><div class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Permissions</div><div class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Audit Log</div><div class="nav-item"><svg class="nav-icon" viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Configuration</div></div></div><div class="main"><div class="page-header"><div><div class="page-title">Workspace Health</div><div class="page-sub">Last updated 2 min ago · Malaysia workspace</div></div><button class="btn-primary">+ Invite Member</button></div><div class="stats"><div class="stat"><div class="stat-val">12</div><div class="stat-lbl">Total Members</div><div class="stat-chg">↑ 3 this week</div></div><div class="stat"><div class="stat-val">9</div><div class="stat-lbl">Active (7d)</div><div class="stat-chg">75% activation</div></div><div class="stat"><div class="stat-val">100%</div><div class="stat-lbl">Compliance</div><div class="stat-chg" style="color:#34d399">✓ All clear</div></div><div class="stat"><div class="stat-val">4/5</div><div class="stat-lbl">Setup Steps</div><div class="stat-chg" style="color:#febc2e">1 remaining</div></div></div><div class="row-hdr"><div>Member</div><div>Role</div><div>Activity (7d)</div><div>Status</div><div></div></div><div class="row"><div class="user-wrap"><div class="avatar" style="background:#6c63ff">AM</div><div><div class="user-name">Ananya M.</div><div class="user-email">ananya@co.com</div></div></div><div><span class="badge" style="background:rgba(108,99,255,.15);color:#818cf8;border:1px solid rgba(108,99,255,.25)">Admin</span></div><div><div class="act-bar"><div class="act-fill" style="width:90%"></div></div><div class="act-lbl">High</div></div><div><span class="badge" style="background:rgba(52,211,153,.1);color:#34d399;border:1px solid rgba(52,211,153,.2)">Active</span></div><div><button class="btn-manage">Manage</button></div></div><div class="row"><div class="user-wrap"><div class="avatar" style="background:#ff6b6b">RK</div><div><div class="user-name">Rahul K.</div><div class="user-email">rahul@co.com</div></div></div><div><span class="badge" style="background:rgba(6,182,212,.1);color:#06b6d4;border:1px solid rgba(6,182,212,.2)">Member</span></div><div><div class="act-bar"><div class="act-fill" style="width:30%;background:linear-gradient(90deg,#febc2e,#ff9a3c)"></div></div><div class="act-lbl" style="color:#febc2e">Low — nudge?</div></div><div><span class="badge" style="background:rgba(254,188,46,.1);color:#febc2e;border:1px solid rgba(254,188,46,.2)">At risk</span></div><div><button class="btn-nudge">Nudge</button></div></div><div class="row"><div class="user-wrap"><div class="avatar" style="background:#43e97b">PT</div><div><div class="user-name">Priya T.</div><div class="user-email">priya@co.com</div></div></div><div><span class="badge" style="background:rgba(255,255,255,.06);color:#94a3b8;border:1px solid rgba(255,255,255,.1)">Guest</span></div><div><div class="act-bar"><div class="act-fill" style="width:55%"></div></div><div class="act-lbl">Moderate</div></div><div><span class="badge" style="background:rgba(52,211,153,.1);color:#34d399;border:1px solid rgba(52,211,153,.2)">Active</span></div><div><button class="btn-manage">Manage</button></div></div></div></div></body></html>`;
-
-  var bf = document.getElementById('before-frame');
-  var af = document.getElementById('after-frame');
-  if(bf) bf.srcdoc = beforeHTML;
-  if(af) af.srcdoc = afterHTML;
-})();
-
 lucide.createIcons();
 </script>
 </body>
